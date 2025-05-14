@@ -1,6 +1,14 @@
 function findOdd(A) {
-  //happy coding!
-  return 0;
+  let test = {};
+  A.forEach((e) => {
+    test[e] = (test[e] || 0) + 1;
+  });
+
+  for (let n in test) {
+    if (test[n] % 2 != 0) {
+      return Number(n);
+    }
+  }
 }
 
 const assert = require("chai").assert;
